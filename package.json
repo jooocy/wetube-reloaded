@@ -1,0 +1,53 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "Youtube clone",
+  "scripts": {
+    "start": "node build/init.js",
+    "build": "npm run build:server && npm run build:assets",
+    "dev:server": "nodemon",
+    "dev:assets": "webpack --mode=development -w",
+    "build:server": "babel src -d build",
+    "build:assets": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jooocy/wetube-reloaded.git"
+  },
+  "author": "joo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jooocy/wetube-reloaded/issues"
+  },
+  "homepage": "https://github.com/jooocy/wetube-reloaded#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "getusermedia": "^2.0.1",
+    "mongoose": "^6.0.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "node-fetch": "^2.6.1",
+    "pug": "^2.0.4",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.3.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "nodemon": "^2.0.12",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.58.0",
+    "webpack-cli": "^4.9.0"
+  }
+}
